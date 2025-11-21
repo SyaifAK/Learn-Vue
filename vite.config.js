@@ -10,6 +10,14 @@ export default defineConfig({
     vue(),
     //vueDevTools(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        index: 'index.html',
+        halo: 'halo.html',
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
