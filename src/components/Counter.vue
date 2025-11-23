@@ -10,29 +10,16 @@
     <button @click="decrementReactive">decrementReactive</button>
   </div>
 </template>
-<script>
+<script setup>
 import { ref, reactive } from 'vue';
-export default {
-  setup() {
-    //belajar menggunakan ref
-    const count = ref(0); //reactive single value
-    const incrementRef = () => count.value++;
-    const decrementRef = () => count.value--;
+//belajar menggunakan ref
+const count = ref(0); //reactive single value
+const incrementRef = () => count.value++;
+const decrementRef = () => count.value--;
 
-    //belajr menggunakan reactive
-    const state = reactive({ counter: 0 }); //reactuve object
-    const incrementReactive = () => state.counter++;
-    const decrementReactive = () => state.counter--;
-
-    return {
-      count,
-      state,
-      incrementRef,
-      decrementRef,
-      incrementReactive,
-      decrementReactive,
-    };
-  },
-};
+//belajr menggunakan reactive
+const state = reactive({ counter: 0 }); //reactuve object
+const incrementReactive = () => state.counter++;
+const decrementReactive = () => state.counter--;
 </script>
 <style lang=""></style>
