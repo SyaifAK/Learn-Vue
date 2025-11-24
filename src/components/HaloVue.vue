@@ -6,6 +6,8 @@ const tes = 'cupu';
 const a = ref(0);
 //user
 const role = ref('user');
+//show
+const show = ref(false);
 </script>
 <template>
   <div>
@@ -25,6 +27,11 @@ const role = ref('user');
     <p v-if="role === 'admin'">Selamat datang admin wkwkwk</p>
     <p v-else-if="role === 'user'">Selanat daataaang user elek</p>
     <p v-else>anomali bjr ?</p>
+  </div>
+
+  <div class="show">
+    <button @click="show = !show">toggle</button>
+    <p v-show="show">ini akan tampil tapi disembunyikan css</p>
   </div>
 </template>
 <style>
